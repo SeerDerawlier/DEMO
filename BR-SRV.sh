@@ -39,10 +39,10 @@ apt-get install -y ansible sshpass
 sed -i 's/^#inventory      = \/etc\/ansible\/hosts/inventory      = \/etc\/ansible\/hosts/' /etc/ansible/ansible.cfg 
 echo "host_key_checking  False" | tee -a /etc/ansible/ansible.cfg
 cat > /etc/ansible/hosts <<EOF
-HQ-RTR ansible_host=192.168.18.1 ansible_user=net_admin ansible_password=P@$$word ansible_connection=network_cli ansible_network_os=ios
-BR-RTR ansible_host=192.168.24.1 ansible_user=net_admin ansible_password=P@$$word ansible_connection=network_cli ansible_network_os=ios
-HQ-SRV ansible_host=192.168.18.30 ansible_user=sshuser ansible_password=P@ssw0rd ansible_ssh_port=3015
-HQ-CLI ansilbe_host=192.168.18.34 ansible_user=sshuser ansible_password=P@ssw0rd ansible_ssh_port=3015
+HQ-RTR ansible_host=192.168.17.1 ansible_user=net_admin ansible_password=P@$$word ansible_connection=network_cli ansible_network_os=ios
+BR-RTR ansible_host=192.168.23.1 ansible_user=net_admin ansible_password=P@$$word ansible_connection=network_cli ansible_network_os=ios
+HQ-SRV ansible_host=192.168.17.30 ansible_user=sshuser ansible_password=P@ssw0rd ansible_ssh_port=3015
+HQ-CLI ansilbe_host=192.168.17.34 ansible_user=sshuser ansible_password=P@ssw0rd ansible_ssh_port=3015
 
 [all:vars]
 ansible_python_interpreter=/usr/bin/python3
