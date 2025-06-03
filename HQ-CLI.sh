@@ -16,7 +16,7 @@ sshuser ALL=(ALL) NOPASSWD:ALL
 
 Домен
 echo "default_realm = AU-TEAM.IRPO" | sudo tee -a /etc/krb5.conf
-echo "nameserver 192.168.24.14" | sudo tee -a /etc/resolv.conf
+echo "nameserver 192.168.23.14" | sudo tee -a /etc/resolv.conf
 
 apt-get update && apt-get install -y gpupdate
 gpupdate-setup enable
@@ -35,6 +35,6 @@ apt-get update && apt-get install -y nfs-{utils,clients}
 mkdir /mnt/nfs 
 chmod 777 /mnt/nfs 
 vim /etc/fstab
-192.168.18.30:/raid5/nfs /mnt/nfs nfs defaults 0 0
+192.168.17.30:/raid5/nfs /mnt/nfs nfs defaults 0 0
 mount -av
 df -h
