@@ -17,7 +17,7 @@ cat > /etc/dnsmasq.conf <<EOF
 no-resolv
 no-poll
 no-hosts
-listen-address=192.168.18.30
+listen-address=192.168.17.30
 
 server=77.88.8.8
 server=8.8.8.8
@@ -26,12 +26,12 @@ cache-size=1000
 all-servers
 no-negcache
 
-host-record=hq-rtr.au-team.irpo,192.168.18.1
-host-record=hq-srv.au-team.irpo,192.168.18.30
-host-record=hq-cli.au-team.irpo,192.168.18.34
+host-record=hq-rtr.au-team.irpo,192.168.17.1
+host-record=hq-srv.au-team.irpo,192.168.17.30
+host-record=hq-cli.au-team.irpo,192.168.17.34
 
-address=/br-rtr.au-team.irpo/192.168.24.1
-address=/br-srv.au-team.irpo/192.168.24.14
+address=/br-rtr.au-team.irpo/192.168.23.1
+address=/br-srv.au-team.irpo/192.168.23.14
 
 cname=moodle.au-team.irpo,isp.au-team.irpo
 cname=wiki.au-team.irpo,isp.au-team.irpo
